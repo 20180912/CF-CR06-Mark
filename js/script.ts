@@ -23,7 +23,7 @@ class Loc {
     }
     render() {
         return `
-            <div class="card p-2">
+            <div class="card">
                 <img class="card-img" src="${this.image}">
                 <div class="text-center card-body">
                     <h5 class="card-title">${this.name}</h5>
@@ -50,7 +50,7 @@ class Restaurant extends Loc {
     }
     render () {
         return `
-        <div class="card p-2">
+        <div class="card">
             <img class="card-img" src="${this.image}">
             <div class="text-center card-body">
                 <h5 class="card-title">${this.name}</h5>
@@ -79,7 +79,7 @@ class Eve extends Loc {
     }
     render () {
         return `
-        <div class="card p-2">
+        <div class="card">
             <img class="card-img" src="${this.image}">
             <div class="text-center card-body">
                 <h5 class="card-title">${this.name}</h5>
@@ -110,7 +110,7 @@ $(document).ready(function () {
     
             //checking whether a location has been visited and if so, adding date and time
             if (arr[i].dateCreated != "") {
-                $(`#${i} div div`).append(`<p class="h6 text-success">visited on ${arr[i].dateCreated} at ${arr[i].timeCreated}</p>`)
+                $(`#${i} > div`).append(`<div class="card-footer"><p class="h6 text-success text-center">visited on ${arr[i].dateCreated} at ${arr[i].timeCreated}</p></div>`)
             }
         }
     }
